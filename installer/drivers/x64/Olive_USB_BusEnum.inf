@@ -1,0 +1,96 @@
+;/*++
+;
+;Copyright (c) 2008-2010 Via Telecom All rights Reserved
+;
+;Module Name:
+;
+;    VIABUSENUM.INF
+;
+;Abstract:
+;    INF file for installing toaster bus enumerator driver
+;
+;--*/
+
+
+[Version]
+Signature	= "$WINDOWS NT$"
+Class		= System
+ClassGuid	= {4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider	= %VENDOR%
+DriverVer	= 10/12/2009, 1.0.5
+CatalogFile	= Olive_USB_BusEnum.cat
+
+
+[DestinationDirs]
+Drivers_Dir = 12
+
+[SourceDisksNames]
+1 = %SOURCE_DISKS_NAMES%,,,""
+
+[SourceDisksFiles]
+Olive_USB_BusEnum.sys  = 1,,
+
+;=========================================
+; BusEnum  Install Section
+;=========================================
+
+[Manufacturer]
+%VENDOR% = DeviceList, NTia64, NTamd64
+
+; ==============================================================
+; ================= Control Flags Sections =====================
+; ==============================================================
+[ControlFlags]
+ExcludeFromSelect = *
+
+[DeviceList]
+%DEVICENAME% = DriverInstall, USB\VID_22F4&PID_0001&MI_02
+%HAIER_DEVICENAME% = DriverInstall, USB\VID_201E&PID_1001&MI_02
+%BASE_DEVICENAME% = DriverInstall, USB\VID_201E&PID_1002&MI_02
+%VIA_DEVICENAME% = DriverInstall, USB\VID_15EB&PID_0001&MI_02
+%VIA_DEVICENAME% = DriverInstall, USB\VID_15EB&PID_0101&MI_03
+
+[DeviceList.NTia64]
+%DEVICENAME% = DriverInstall, USB\VID_22F4&PID_0001&MI_02
+%HAIER_DEVICENAME% = DriverInstall, USB\VID_201E&PID_1001&MI_02
+%BASE_DEVICENAME% = DriverInstall, USB\VID_201E&PID_1002&MI_02
+%VIA_DEVICENAME% = DriverInstall, USB\VID_15EB&PID_0001&MI_02
+%VIA_DEVICENAME% = DriverInstall, USB\VID_15EB&PID_0101&MI_03
+
+[DeviceList.NTamd64]
+%DEVICENAME% = DriverInstall, USB\VID_22F4&PID_0001&MI_02
+%HAIER_DEVICENAME% = DriverInstall, USB\VID_201E&PID_1001&MI_02
+%BASE_DEVICENAME% = DriverInstall, USB\VID_201E&PID_1002&MI_02
+%VIA_DEVICENAME% = DriverInstall, USB\VID_15EB&PID_0001&MI_02
+%VIA_DEVICENAME% = DriverInstall, USB\VID_15EB&PID_0101&MI_03
+
+
+[DriverInstall.NT]
+CopyFiles = Drivers_Dir
+
+[Drivers_Dir]
+Olive_USB_BusEnum.sys
+
+
+;========================= Service installation==============================
+[DriverInstall.NT.Services]
+AddService = Olive_USB_BusEnum, 0x00000002, DriverService
+
+; ==================== busenum driver install sections ======================
+[DriverService]
+DisplayName    = %SERVICENAME%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\Olive_USB_BusEnum.sys
+LoadOrderGroup = Extended Base
+
+
+[Strings]
+VENDOR              = "Olive Telecom Inc"
+DEVICENAME          = "Olive Telecom Bus Enumerator Device"
+HAIER_DEVICENAME    = "Haier Bus Enumerator Device"
+BASE_DEVICENAME     = "Bus Enumerator Device"
+VIA_DEVICENAME      = "VIA Telecom Bus Enumerator Device"
+SERVICENAME         = "Olive Telecom USB Bus Enumerator"
+SOURCE_DISKS_NAMES  = "Olive Telecom\\Olive USB Drivers\\Olive_USB_BusEnum"

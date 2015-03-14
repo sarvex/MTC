@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MTC_ru_RU.qm</file>
+        <file>MTC_uk_UA.qm</file>
+        <file>MTC_en_US.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,167 @@
+;/*++
+;
+;Copyright (c) 2008-2010 Via Telecom Inc.
+;
+;Module Name:
+;
+;    VIAWINMUX.INF
+;
+;Abstract:
+;
+;    INF file for installing toaster class with upper and lower filters and
+;    toaster device driver with upper and lower filters.
+;    Note: In order for the Upper and Lower filter entry for the class to be 
+;          added to the registry, you must remove the existing Toaster class 
+;	   key from the registry if you had previously installed Toaster class. 
+;	   Otherwise the setup ignores AddReg section
+;	   if it finds the toaster class guid in the registy.
+;
+;
+;--*/
+
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Ports
+CLASSGUID   = {4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider    = %VENDOR%
+CatalogFile = Olive_USB_WinMux.cat
+DriverVer   = 10/12/2009, 1.0.3
+
+; ==============================================================
+; ================= Control Flags Sections =====================
+; ==============================================================
+[ControlFlags]
+ExcludeFromSelect = *
+
+; ================= Class section =====================
+
+;*****************************************
+; Toaster Device  Install Section
+;*****************************************
+
+[Manufacturer]
+%VENDOR% = Standard, NTia64, NTamd64
+
+[Standard]
+; DisplayName       		Section           DeviceId
+; -----------       		-------           --------
+%DEVICENAME.AT%    = DriverInstall, USB\VID_22F4&PID_0001&MI_04
+%DEVICENAME.VOICE% = DriverInstall, USB\VID_22F4&PID_0001&MI_05
+%DEVICENAME.LBS%   = DriverInstall, USB\VID_22F4&PID_0001&MI_06
+%HAIER_DEVICENAME.AT%    = DriverInstall, USB\VID_201E&PID_1001&MI_04
+%HAIER_DEVICENAME.VOICE% = DriverInstall, USB\VID_201E&PID_1001&MI_05
+%HAIER_DEVICENAME.LBS%   = DriverInstall, USB\VID_201E&PID_1001&MI_06
+%BASE_DEVICENAME.AT%    = DriverInstall, USB\VID_201E&PID_1002&MI_04
+%BASE_DEVICENAME.VOICE% = DriverInstall, USB\VID_201E&PID_1002&MI_05
+%BASE_DEVICENAME.LBS%   = DriverInstall, USB\VID_201E&PID_1002&MI_06
+%VIA_DeviceName.AT%    = DriverInstall, USB\VID_15EB&PID_0001&MI_04
+%VIA_DeviceName.VOICE% = DriverInstall, USB\VID_15EB&PID_0001&MI_05
+%VIA_DeviceName.LBS%   = DriverInstall, USB\VID_15EB&PID_0001&MI_06
+%VIA_DeviceName.AT%    = DriverInstall, USB\VID_15EB&PID_0101&MI_04
+%VIA_DeviceName.VOICE% = DriverInstall, USB\VID_15EB&PID_0101&MI_05
+%VIA_DeviceName.LBS%   = DriverInstall, USB\VID_15EB&PID_0101&MI_06
+
+[Standard.NTia64]
+; DisplayName       		Section           DeviceId
+; -----------       		-------           --------
+%DEVICENAME.AT%    = DriverInstall, USB\VID_22F4&PID_0001&MI_04
+%DEVICENAME.VOICE% = DriverInstall, USB\VID_22F4&PID_0001&MI_05
+%DEVICENAME.LBS%   = DriverInstall, USB\VID_22F4&PID_0001&MI_06
+%HAIER_DEVICENAME.AT%    = DriverInstall, USB\VID_201E&PID_1001&MI_04
+%HAIER_DEVICENAME.VOICE% = DriverInstall, USB\VID_201E&PID_1001&MI_05
+%HAIER_DEVICENAME.LBS%   = DriverInstall, USB\VID_201E&PID_1001&MI_06
+%BASE_DEVICENAME.AT%    = DriverInstall, USB\VID_201E&PID_1002&MI_04
+%BASE_DEVICENAME.VOICE% = DriverInstall, USB\VID_201E&PID_1002&MI_05
+%BASE_DEVICENAME.LBS%   = DriverInstall, USB\VID_201E&PID_1002&MI_06
+%VIA_DeviceName.AT%    = DriverInstall, USB\VID_15EB&PID_0001&MI_04
+%VIA_DeviceName.VOICE% = DriverInstall, USB\VID_15EB&PID_0001&MI_05
+%VIA_DeviceName.LBS%   = DriverInstall, USB\VID_15EB&PID_0001&MI_06
+%VIA_DeviceName.AT%    = DriverInstall, USB\VID_15EB&PID_0101&MI_04
+%VIA_DeviceName.VOICE% = DriverInstall, USB\VID_15EB&PID_0101&MI_05
+%VIA_DeviceName.LBS%   = DriverInstall, USB\VID_15EB&PID_0101&MI_06
+
+[Standard.NTamd64]
+; DisplayName       		Section           DeviceId
+; -----------       		-------           --------
+%DEVICENAME.AT%    = DriverInstall, USB\VID_22F4&PID_0001&MI_04
+%DEVICENAME.VOICE% = DriverInstall, USB\VID_22F4&PID_0001&MI_05
+%DEVICENAME.LBS%   = DriverInstall, USB\VID_22F4&PID_0001&MI_06
+%HAIER_DEVICENAME.AT%    = DriverInstall, USB\VID_201E&PID_1001&MI_04
+%HAIER_DEVICENAME.VOICE% = DriverInstall, USB\VID_201E&PID_1001&MI_05
+%HAIER_DEVICENAME.LBS%   = DriverInstall, USB\VID_201E&PID_1001&MI_06
+%BASE_DEVICENAME.AT%    = DriverInstall, USB\VID_201E&PID_1002&MI_04
+%BASE_DEVICENAME.VOICE% = DriverInstall, USB\VID_201E&PID_1002&MI_05
+%BASE_DEVICENAME.LBS%   = DriverInstall, USB\VID_201E&PID_1002&MI_06
+%VIA_DeviceName.AT%    = DriverInstall, USB\VID_15EB&PID_0001&MI_04
+%VIA_DeviceName.VOICE% = DriverInstall, USB\VID_15EB&PID_0001&MI_05
+%VIA_DeviceName.LBS%   = DriverInstall, USB\VID_15EB&PID_0001&MI_06
+%VIA_DeviceName.AT%    = DriverInstall, USB\VID_15EB&PID_0101&MI_04
+%VIA_DeviceName.VOICE% = DriverInstall, USB\VID_15EB&PID_0101&MI_05
+%VIA_DeviceName.LBS%   = DriverInstall, USB\VID_15EB&PID_0101&MI_06
+
+[DriverInstall]
+CopyFiles=DriverInstall.Copy
+AddReg=DriverInstall.AddReg
+
+[DriverInstall.Copy]
+Olive_USB_WinMux.sys
+
+[DriverInstall.AddReg]
+HKR,,PortSubClass,1,01
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverInstall.NT]
+CopyFiles = DriverInstall.NT.Copy
+AddReg=DriverInstall.AddReg, DriverInstall.NT.AddReg
+SyssetupPnPFlags = 1
+
+[DriverInstall.NT.HW]
+AddReg = DriverInstall.NT.HW.AddReg
+
+[DriverInstall.NT.Copy]
+Olive_USB_WinMux.sys
+
+[DriverInstall.NT.HW.AddReg]
+;HKR,,"UpperFilters",0x00010000,"serenum"
+
+[DriverInstall.NT.AddReg]
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+;-------------- Service installation
+[DriverInstall.NT.Services]
+AddService = Olive_USB_WinMux, 0x00000002, DriverService
+
+; -------------- Toaster Driver install sections
+[DriverService]
+DisplayName    = %SERVICENAME%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\Olive_USB_WinMux.sys
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %SOURCE_DISKS_NAMES%, , ,""
+
+[SourceDisksFiles]
+Olive_USB_WinMux.sys = 1,,
+
+[Strings]
+VENDOR				= "Olive Telecom Inc"
+DEVICENAME.AT       = "Olive Telecom AT Port"
+DEVICENAME.VOICE    = "Olive Telecom Voice Port"
+DEVICENAME.LBS      = "Olive Telecom LBS Port"
+HAIER_DEVICENAME.AT       = "Haier AT Port"
+HAIER_DEVICENAME.VOICE    = "Haier Voice Port"
+HAIER_DEVICENAME.LBS      = "Haier LBS Port"
+BASE_DEVICENAME.AT        = "AT Port"
+BASE_DEVICENAME.VOICE     = "Voice Port"
+BASE_DEVICENAME.LBS       = "LBS Port"
+VIA_DEVICENAME.AT         = "VIA Telecom AT Port"
+VIA_DEVICENAME.VOICE      = "VIA Telecom Voice Port"
+VIA_DEVICENAME.LBS        = "VIA Telecom LBS Port"
+SERVICENAME			= "Olive Telecom USB MUX Serial Port"
+SOURCE_DISKS_NAMES  = "Olive Telecom\\Olive USB Drivers\\Olive_USB_WinMux"

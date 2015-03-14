@@ -1,0 +1,147 @@
+Debug: Successfully opened Serial Port 
+Debug: "10:02:58.770" [ 6 ] Write to AT port : "ATE0
+" 
+Debug: Parsing Item :  "
+^SIMST:1
+
+^MODE:4
+
+^HRSSILVL:80
+
+" 
+Debug: Parsing Item :  "
+" 
+Debug: "10:02:59.190" [ 11 ] Write to AT port : "AT^HDRCSQ
+" 
+Debug: Parsing Item :  "
+^HDRCSQ:0
+
+" 
+Debug: Signal Strength: 0 
+Debug: Parsing Item :  "
+" 
+Debug: "10:02:59.600" [ 15 ] Write to AT port : "AT^PREFMODE=4
+" 
+Debug: Parsing Item :  "
+" 
+Debug: Parsing Item :  "
+" 
+Debug: Parsing Item :  "
+^HRSSILVL:99
+" 
+Debug: "10:03:02.050" [ 11 ] Write to AT port : "AT^HDRCSQ
+" 
+Debug: Parsing Item :  "
++DOSESSION:1
+
+^HDRCSQ:99
+
+" 
+Debug: Signal Strength: 0 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:02.460" [ 11 ] Write to AT port : "AT+EVCSQ1
+" 
+Debug: Parsing Item :  "
++EVCSQ1:-54.70,-256.00,-256.00,-256.00,-256.00,-256.00,-24.74,0.00,1,'0',1
+
+" 
+Debug: Data Rate: "0" 0 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:04.930" [ 11 ] Write to AT port : "AT^HDRCSQ
+" 
+Debug: Parsing Item :  "
+^HDRCSQ:99
+
+" 
+Debug: Signal Strength: 5 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:05.363" [ 11 ] Write to AT port : "AT+EVCSQ1
+" 
+Debug: Parsing Item :  "
++EVCSQ1:-54.70,-256.00,-256.00,-256.00,-256.00,-256.00,-24.74,0.00,1,'0',1
+
+" 
+Debug: Data Rate: "0" 0 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:07.803" [ 11 ] Write to AT port : "AT^HDRCSQ
+" 
+Debug: Parsing Item :  "
+^HDRCSQ:99
+
+" 
+Debug: Signal Strength: 5 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:08.223" [ 11 ] Write to AT port : "AT+EVCSQ1
+" 
+Debug: Parsing Item :  "
++EVCSQ1:-54.23,-256.00,-256.00,-256.00,-256.00,-256.00,-25.12,0.00,1,'0',1
+
+" 
+Debug: Data Rate: "0" 0 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:11.078" [ 11 ] Write to AT port : "AT^HDRCSQ
+" 
+Debug: "10:03:11.498" [ 11 ] Write to AT port : "AT+EVCSQ1
+" 
+Debug: Parsing Item :  "
+^HDRCSQ:99
+
+" 
+Debug: Signal Strength: 5 
+Debug: Parsing Item :  "
+
++EVCSQ1:-54.23,-256.00,-256.00,-256.00,-256.00,-256.00,-25.12,0.00,1,'0',1
+
+" 
+Debug: Data Rate: "0" 0 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:13.978" [ 11 ] Write to AT port : "AT^HDRCSQ
+" 
+Debug: Parsing Item :  "
+^HDRCSQ:99
+
+" 
+Debug: Signal Strength: 5 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:14.398" [ 11 ] Write to AT port : "AT+EVCSQ1
+" 
+Debug: Parsing Item :  "
++EVCSQ1:-54.00,-256.00,-256.00,-256.00,-256.00,-256.00,-25.34,0.00,1,'0',1
+
+" 
+Debug: Data Rate: "0" 0 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:16.839" [ 11 ] Write to AT port : "AT^HDRCSQ
+" 
+Debug: Parsing Item :  "
+^HDRCSQ:99
+
+" 
+Debug: Signal Strength: 5 
+Debug: Parsing Item :  "
+" 
+Debug: "10:03:17.255" [ 11 ] Write to AT port : "AT+EVCSQ1
+" 
+Debug: Parsing Item :  "
++EVCSQ1:-54.05,-256.00,-256.00,-256.00,-256.00,-256.00,-25.34,0.00,1,'0',1
+
+" 
+Debug: Data Rate: "0" 0 
+Debug: Parsing Item :  "
+" 
+Debug: MainWindow::onConnectButtonClicked 
+Debug: Failure getting RAS error message =  0 
+Debug: Opening Port 
+Debug: Port Opened 
+Debug: Connecting Device 
+Debug: 678 : "Oaaeaiiue eiiiu?oa? ia ioaa?aao. ?oiau i?iaa?eou ainooiiinou na?aa?a, i?iaa?uoa naycu n oaaeaiiui eiiiu?oa?ii." 
+Debug: Connecting Device 
